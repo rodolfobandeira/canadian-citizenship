@@ -12,21 +12,12 @@ questions.each do |question|
   puts "Question: #{data.first}".yellow
   puts ''
   puts answers
-  gets
+  key_pressed = gets
+  break if key_pressed.chomp == 'q'
+
   puts answers[correct_answer[-1].to_i].blue
   key_pressed = gets
-  break if key_pressed == "q\n"
+  break if key_pressed.chomp == 'q'
 
   puts '-' * 79
 end
-
-
-byebug
-
-puts file
-#You can vote in advance if:
-#You know you will not be able to vote on Election Day
-#Sick and physically disabled
-#All of the above
-#You are elderly
-#Answer: 2
