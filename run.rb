@@ -9,13 +9,13 @@ questions.each do |question|
   answers = data[1..(data.size - 2)]
   correct_answer = data.last
 
-  puts "Question: #{data.first}".yellow
+  puts "Question: #{data.first}".red
   puts ''
   puts answers
   key_pressed = gets
   break if key_pressed.chomp == 'q'
 
-  puts answers[correct_answer[-1].to_i].blue
+  puts answers[correct_answer[-1].to_i].yellow
   key_pressed = gets
   break if key_pressed.chomp == 'q'
 
